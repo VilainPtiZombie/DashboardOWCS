@@ -1,0 +1,231 @@
+.imgarti{
+	width: 500px;
+}
+
+#map-canvas {
+    width: 100%;
+    height: 700px;
+ }
+
+#cartehover{
+	position: relative;
+}
+
+ .hover{
+ 	position: absolute;
+ 	top: 0;
+ 	left: 0;
+ 	bottom: 0;
+ 	right: 0;
+ 	z-index: 99999999;
+ 	background: rgba(0,0,0,0.5);
+ 	color: #fff;
+ }
+
+
+body {
+	height: 100%;
+}
+
+.active {
+	color: #c00;
+	font-weight: bold;
+}
+
+
+/*---- HEADER ----*/
+
+#langue li, #menu li, .RS li {
+	float: left;
+}
+
+/*---- TEST ----*/
+
+#test .bloc{
+	background: red;
+	width: 22.6%;
+	margin: 5%;
+}
+
+
+/*---- BODY INDEX ----*/
+
+	/*---- SLIDER ----*/
+
+	#slider {
+	overflow: hidden;
+	position: relative;
+	}
+
+	#slider ul {
+		position: relative;
+	}
+
+	#slider li {
+		float: left;
+		text-align: center;
+	}
+
+	#prev {
+		position: absolute;
+		top: 45%;
+		left: 5%;
+	}
+
+	#next {
+		position: absolute;
+		top: 45%;
+		right: 5%;
+	}
+
+
+
+	/*---- SOUS MENU ----*/
+	#sous_menu li{
+		float: left;
+	}
+
+	/*---- A PROPOS ----*/
+		/*---- PICTO ----*/
+		#picto_apropos li{
+			float: left;
+		}
+
+	/*---- SERVICES ----*/
+		#services{
+			display: none;
+		}
+
+
+
+	/*---- NOUVEAUTES ----*/
+		#nouveaute{
+			display: none;
+		}
+
+/*---- LES VIGNERONS ----*/
+	#vigenrons img{
+		padding: 5%;
+	}
+	/*---- GALERIE ----*/
+	.galerie {
+		position: relative;
+		display: block;
+	}
+
+	.galerie .hover{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		color: #fff;
+		background:rgba(0,0,0,0.2);
+		text-align: center;
+		transition: all .5s ease-in-out;
+	}
+
+	.galerie .hover img{
+		max-width: 8%;
+		margin-top: 13%;
+	}
+
+	.galerie .hover:hover{
+		background:rgba(0,0,0,0.5);
+	}
+
+
+	/*---- CARTE ----*/
+	#carte .hover{
+		text-align: center;
+		display: block;	
+	}
+
+	#carte a:hover .hover{
+		display: none;
+	}
+
+/*---- LES VINS ----*/
+
+	/*---- col droite ----*/
+	.sousmenu li{
+		float: left;
+	}
+
+
+
+
+
+/*---- CONTACT ----*/
+
+#formulaire{
+	background-image: url(../img/contact/c1.jpg);
+	padding: 3%;
+	color: #fff;
+}
+
+#formulaire h2{
+	font-size: 2.3rem;
+	text-transform: uppercase;
+	margin-bottom: 3rem;
+}
+
+#formulaire input{
+	padding: 1%;
+	width: 28%;
+	margin-right: 4.5%;
+	font-size: 1.1rem;
+}
+
+#formulaire input:nth-of-type(3){
+	margin-right: 0;
+}
+
+#formulaire textarea{
+	float: left;
+	padding: 1%;
+	width: 62.8%;
+	margin-right: 4.5%;
+	font-size: 1.1rem;
+}
+
+#contactinfo {
+	width: 30%;
+	float: left;
+	background: #fff;
+	padding: 2%;
+}
+
+#contactinfo h2{
+	color: #000
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
