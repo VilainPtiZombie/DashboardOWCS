@@ -202,7 +202,74 @@ body {
 
 
 
+body.home-body{
+    background-color:#333!important;
+        font-family: Raleway;
+}
+body div.form-home {
+    display:block;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+    height:100vh;
+    padding:auto;
+}
 
+.form-block {
+    display: block;
+    width:33%;
+    margin:12% auto;
+    padding:4% 4%;
+    background-color:rgba(255,255,255,0.3);
+}
+
+.form-block h2 {
+    color:white;
+    font-size:34px;
+    text-transform: uppercase;
+    margin-top:-4%;
+    font-weight:500;
+}
+
+.form-block input {
+    padding: 10px 30px;
+    margin: 4%;
+    background-color: rgba(255,255,255,0);
+    border:0px;
+    border-bottom: 2px solid white;
+    color:white;
+    text-align:center;
+}
+.form-block input:active {
+    padding: 10px 30px;
+    margin: 4%;
+    background-color: rgba(255,255,255,0);
+    border:0px;
+    border-bottom: 2px solid #03aaee;
+    color:#03aaee;
+    text-align:center;
+}
+
+.form-block input[type="submit"] {
+    border: 2px solid white;
+    color:white;
+    text-align:center;
+}
+.form-block input[type="submit"]:active {
+    border: 2px solid #03aaee;
+    color:white;
+    background-color:#03aaee;
+    text-align:center;
+    transition:ease-in-out;
+}
+
+div.Recap-Head {
+    padding:2em 0;
+    text-align:center;  
+}
+.Recap-Head p {
+    padding:10px;
+}
 
 
 

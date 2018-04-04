@@ -55,7 +55,18 @@ if( $user->rowCount() ==  0 ){
 
 }//fin du script
 
-
+session_start();
+if (isset($_POST["pseudo"]) && !empty($_POST["pseudo"]) && isset($_POST["password"]) && !empty($_POST["password"]))
+$pseudoCo = $_POST['pseudo'];
+$passCo = $_POST['password'];
+    
+    if ( $pseudoCo & $passCo == true ){
+       $_SESSION['alerte'] = "<h1> youhou</h1>";
+    } 
+    else
+        {
+        $_SESSION['alerte'] = "<h1> zs</h1>";
+    };
 
 //test de la maj GIt
 // Bien reçu

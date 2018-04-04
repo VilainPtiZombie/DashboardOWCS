@@ -61,7 +61,7 @@
 		<label for="levelselect">Le rang du nouvel utilisateur</label>
 		<p>
 			<select name="levelselect" id="levelselect">
-					<option value="user">Utilisateur</option>
+					<option value="user">Clients</option>
 					<option value="admin">Administrateur</option>			
 			</select>
 		</p>

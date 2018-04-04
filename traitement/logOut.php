@@ -12,6 +12,6 @@ unset($_SESSION['user']);
 session_destroy();
 
 //on redirige vers le front office
-header('Location: ..');
+header('Location: ../back/index.php');
 
 //fin du scipt

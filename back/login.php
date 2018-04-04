@@ -27,28 +27,46 @@
 </head>
 
 <!-- BODY -->
-<body class="container">
+<body class="home-body">
 
 	<!-- INPORT HEADER -->
-	<?php include('../include/header_back.php'); ?>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-home">
+	<form class="form-block" action="../traitement/logIn.php" method="POST">
+	<!-- Home Login -->
 
-	<form action="../traitement/logIn.php" method="POST">
-
-		<h2 class="page-header">Se connecter</h2>
+           
+		<h2 class="page-header">Plateforme Client</h2>
 		<p>
-			<input type="text" name="nom" placeholder="Le pseudo" />
+			<input type="text" name="nom" placeholder="Identifiant" />
 		</p>
 		<p>
-			<input type="password" name="motDePasse" placeholder="Le passeword" />
+			<input type="password" name="motDePasse" placeholder="Password" />
 		</p>
 		<p>
 			<input type="submit" value="Se connecter" />
 		</p>
+                 <?php
+            //s'il existe la variable d'url logEmpty
+	if( isset($_GET['logEmpty']) ){
+
+		//on affiche un message pour prevenir l'utilisateur
+		echo '<p class="alert alert-danger">Le pseudo et le mot de passe sont obligatoire.</p>';
+
+	}
+
+	//s'il existe la variable d'url userUnknow
+	if( isset($_GET['userUnknow']) ){
+
+		//on affiche un message pour prevenir l'utilisateur
+		echo '<p class="alert alert-danger">Ce couple utilisateur/mot de passe est inconnu.</p>';
+
+	}
+            ?>
 
 	</form>
+        </div>
+        <!-- Fin HOME LOGIN -->
 
-	<!-- INPORT FOOTER -->
-	<?php include('../include/footer_back.php'); ?>
 	
 </body>
 

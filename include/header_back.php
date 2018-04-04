@@ -51,7 +51,7 @@
 	if( !empty($_SESSION['user']) ){
 
 		//message de bienvenue
-        echo '<p>Bonjour '.$_SESSION['user'].'.</p>'; echo '<p>Projet : '.$_SESSION['projet'].'.</p>';
+        echo '<div class="container Recap-Head"> <div class="row"> <p class="col-lg-3">Bonjour '.$_SESSION['user'].'.</p>'; echo ' <p class="col-lg-3">Projet : '.$_SESSION['projet'].'.</p>'; echo ' <p class="col-lg-3">Avancement : '.$_SESSION['avancement'].'.</p>'; echo ' <p class="col-lg-3">Contrat : '.$_SESSION['contrat'].'.</p> </div></div>';
                 
 
 	}
