@@ -13,13 +13,14 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/wamp64/www/Vinostar_php/traitement/addUser.php</file>
-            <file>file:/C:/wamp64/www/Vinostar_php/traitement/logIn.php</file>
+            <file>file:/C:/wamp64/www/Vinostar_php/config/functions.php</file>
+            <file>file:/C:/wamp64/www/Vinostar_php/css/style.css</file>
             <file>file:/C:/wamp64/www/Vinostar_php/back/login.php</file>
+            <file>file:/C:/wamp64/www/Vinostar_php/back/index.php</file>
+            <file>file:/C:/wamp64/www/Vinostar_php/config/settings.php</file>
             <file>file:/C:/wamp64/www/Vinostar_php/back/adduser.php</file>
-            <file>file:/C:/wamp64/www/Vinostar_php/back/edithome.php</file>
-            <file>file:/C:/wamp64/www/Vinostar_php/back/editsite.php</file>
             <file>file:/C:/wamp64/www/Vinostar_php/include/header_back.php</file>
-            <file>file:/C:/wamp64/www/Vinostar_php/traitement/newsletter.php</file>
+            <file>file:/C:/wamp64/www/Vinostar_php/back/profil.php</file>
         </group>
     </open-files>
 </project-private>

@@ -106,7 +106,15 @@ $(document).ready(function() {
 		//$("#cartehover .hover").fadeIn(800, function(){ console.log(2)});
 	});
 
+$(document).ready(function () {
 
+    $('#sidebarCollapse').on('click', function () {
+        $('#wrapper').toggleClass('wrapper');
+        $('#sidebar').toggleClass('active');
+        $('.centerContainer').toggleClass('centerContainers');
+    });
+
+});
 
 });
 

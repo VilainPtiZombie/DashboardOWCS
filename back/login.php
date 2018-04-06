@@ -35,7 +35,7 @@
 	<!-- Home Login -->
 
            
-		<h2 class="page-header">Plateforme Client</h2>
+		<h2 class="page-header col-lg-12">Plateforme Client</h2>
 		<p>
 			<input type="text" name="nom" placeholder="Identifiant" />
 		</p>

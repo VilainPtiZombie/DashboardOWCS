@@ -8,11 +8,19 @@
 
  ?>
 
-	<h1 class="page-header">Back Office - Vinostar</h1>
-
-	<nav class="navbar navbar-default">
-		<ul class="nav navbar-nav">
-
+<div id="wrapper" class="col-lg-1">
+	<nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Dashboard OWCS</div>
+                <strong>DO</strong>
+            
+                <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">
+                        <i class="glyphicon glyphicon-home"></i>
+                        Home
+                    </a>
+                </li>
 			<li <?php if($nom == 'index.php') echo 'class="active"'; ?> ><a href="index.php">Accueil</a></li>
 
 			<?php 
@@ -44,17 +52,11 @@
 
 		</ul>
 	</nav>
-
+</div>
 	<?php
 
 	//si l'utilisateur est connecte
-	if( !empty($_SESSION['user']) ){
 
-		//message de bienvenue
-        echo '<div class="container Recap-Head"> <div class="row"> <p class="col-lg-3">Bonjour '.$_SESSION['user'].'.</p>'; echo ' <p class="col-lg-3">Projet : '.$_SESSION['projet'].'.</p>'; echo ' <p class="col-lg-3">Avancement : '.$_SESSION['avancement'].'.</p>'; echo ' <p class="col-lg-3">Contrat : '.$_SESSION['contrat'].'.</p> </div></div>';
-                
-
-	}
 
 
 	//s'il existe la variable d'url logEmpty
@@ -272,7 +274,31 @@
 	 ?>
 
 
+<div class="centerContainer col-lg-10">
+<div id="content col-lg-12">
+            <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+                <i class="glyphicon glyphicon-align-left"></i>
+                Toggle Sidebar
+            </button>
+    <h2 class="page-header col-lg-9"> Bienvenue sur le Dashboard Clients OWCS</h2>
+        <div>
+	
 
+        <div class="container">
+        <?php
+        if( !empty($_SESSION['user']) ){
+
+		//message de bienvenue
+                echo '<div class="container Recap-Head"> <div class="row"> <p class="col-lg-6">Bonjour '.$_SESSION['user'].'.</p>'; 
+                echo ' <p class="col-lg-6">Entreprise : '.$_SESSION['entreprise'].'.</p>';
+                echo ' <p class="col-lg-6">Contrat : '.$_SESSION['contrat'].'.</p>';
+                echo ' <p class="col-lg-6">Avancement : '.$_SESSION['avancement'].'.</p>';
+                echo ' <p class="col-lg-12"><a class="btn-drive" href="'.$_SESSION['drive'].'" target="_blank">Accéder à mon Drive</a></p></div></div>';
+                
+
+	}
+        ?>
+        </div>
 
 
 

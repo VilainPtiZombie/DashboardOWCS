@@ -46,7 +46,11 @@ if( $user->rowCount() ==  0 ){
 	$_SESSION['user'] = $_POST['nom'];
 	$_SESSION['id'] = $data['id'];
 	$_SESSION['level'] = $data['level'];
-        $_SESSION['projet'] = $data['id'];
+        $_SESSION['entreprise'] = $data['entreprise'];
+        $_SESSION['avancement'] = $data['avancement'];
+        $_SESSION['contrat'] = $data['contrat'];
+        $_SESSION['drive'] = $data['drive'];
+        
 
 
 	//on le renvoi vers la page d'accueil du back office

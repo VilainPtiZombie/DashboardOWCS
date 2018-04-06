@@ -42,33 +42,43 @@
 	<!-- INPORT HEADER -->
 	<?php include('../include/header_back.php'); ?>
 
+	<form action="../traitement/addUser.php" method="POST" class="col-lg-6" form-inline">
+		<h3 class="col-lg-12">Ajouter un nouvel utilisateur</h3>
+                <input id="inlineFormInput" class="form-control col-2" type="hidden" name="created_at" value="<?php echo date('Y-m-d H:i:s'); ?>" />
+		
+                <label id="inlineFormInput" class="col-lg-3" for="pseudo">
+			<input class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" type="text" name="pseudo" placeholder="Pseudo" />
+		</label>
 
-	<h2 class="page-header"> Administrer les utilisateurs</h2>
+		<label id="inlineFormInput" class="col-lg-3"  for="password">
+			<input class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" type="password" name="password" placeholder="Mot de passe" />
+		</label>
 
-	<form action="../traitement/addUser.php" method="POST" class="col-md-6">
-		<h3>Ajouter un nouvel utilisateur</h3>
+		<label id="inlineFormInput" class="col-lg-3"  for="entreprise">
+			<input class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" type="text" name="entreprise" placeholder="Entreprise" />
+		</label>
 
-		<label for="pseudo">Le nouveau pseudo</label>
-		<p>
-			<input type="text" name="pseudo" placeholder="Pseudo" value="<?php if(!empty($_GET['pseudo'])) echo $_GET['pseudo']; ?>" />
-		</p>
+		<label id="inlineFormInput" class="col-lg-3"  for="Contrat">
+			<input class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" type="text" name="contrat" placeholder="Contrat" />
+		</label>
+                <label id="inlineFormInput" class="col-lg-3" for="avancement">
+			<input class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" type="text" name="avancement" placeholder="Avancement" />
+		</label>
 
-		<label for="password">Le nouveau mot de passe</label>
-		<p>
-			<input type="password" name="password" placeholder="Mot de passe" value="<?php if(!empty($_GET['password'])) echo $_GET['password']; ?>" />
-		</p>
-
-		<label for="levelselect">Le rang du nouvel utilisateur</label>
-		<p>
-			<select name="levelselect" id="levelselect">
+		<label id="inlineFormInput" class="col-lg-3" for="Drive">
+			<input class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" type="text" name="drive" placeholder="Url Drive" />
+		</label>
+                
+		<label id="inlineFormInput" class="col-lg-3" for="levelselect">
+			<select class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" name="levelselect" id="levelselect">
 					<option value="user">Clients</option>
 					<option value="admin">Administrateur</option>			
 			</select>
-		</p>
+                </label>
 
-		<p>
-			<input type="submit" value="Ajouter"/>
-		</p>
+		<label id="inlineFormInput" class="col-lg-3" >
+			<input class="form-control mb-2 mr-sm-2 mb-sm-0 btn btn-info " id="inlineFormInput" type="submit" value="Ajouter"/>
+		</label>
 	</form>
 
 	<article class="col-md-6">
@@ -91,7 +101,7 @@
 				<td><?php echo $data['level']; ?></td>
 				<td>
 					<?php //si l'utilisateur n'est pas superadmin, on ajoute le lien de suppression
-					if($data['level'] != 'superadmin'){
+					if($data['level'] != 'clients'){
 						echo '(<a href="../traitement/deleteUser.php?id='.$data['id'].'">Supprimer</a>)';
 					} ?>
 				</td>

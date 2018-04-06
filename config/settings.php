@@ -9,7 +9,7 @@ if(empty($_SESSION['lang'])){
 	//cas la on cree ce parametre
 	$_SESSION['lang'] = '_fr';
 }
-
+//Création de l'extraction des contnues des users
 
 //on se connecte a la base de données
 	define('SQL_HOST','localhost');// port pas le meme que local host !!!

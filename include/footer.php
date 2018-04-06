@@ -28,7 +28,7 @@
 				</a>
 			</li>
 		</ul>
-		<p class="xl-col-12 l-col-12">Réalisation: <a href="#">Bananaweb</a></p>
+		<p class="xl-col-12 l-col-12">Réalisation: <a href="#">OWCS</a></p>
 	</div>
 </div>
 

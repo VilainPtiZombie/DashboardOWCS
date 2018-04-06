@@ -62,14 +62,30 @@
 		//on recupere le mot de passe crypte
 		$pass = crypte($_POST['password']);
 
-		//on initialise les variables qui nous permettent de construire la requete avec le pseudo et le mot de pass de l'utilisateur
-		$cols = 'pseudo, password, level';
-		$values = ':p, :m, :l';
-		$content = array(':p' => $_POST['pseudo'], ':m' => $pass, ':l' => $_POST['levelselect']);
+                // Iniate BDD ADD
+                    //Def des values
+                $p=$_POST['pseudo'];
+                $ps=$pass;
+                $l=$_POST['levelselect'];
+                $e=$_POST['entreprise'];
+                $d=$_POST['created_at'];
+                $a=$_POST['avancement'];
+                $c=$_POST['contrat'];
+                $dr=$_POST['drive'];
 
+                
+                $tab = array($p,$ps,$l,$e,$d,$a,$c,$dr);
+                
+                // Connection BDD
+               
+                
 		//on prepare et execute la requete
-		$ajout = $mysql->prepare('INSERT INTO users ('.$cols.') VALUES ('.$values.')');
-		$ajout->execute($content);
+		$sql = ('INSERT INTO `users` (`pseudo`, `password`, `level`, `entreprise`, `created_at`, `avancement`, `contrat`, `drive`) VALUES ("'.$p.'", "'.$ps.'", "'.$l.'", "'.$e.'", "'.$d.'", "'.$a.'", "'.$c.'", "'.$dr.'")');
+		
+                echo "$sql";
+                
+                $req = $mysql->prepare($sql);
+                $req->execute($tab);
 
 		//on redirige vers la fiche du livre avec un message de confirmation
 		header('Location: ../back/adduser.php?&userAdded');

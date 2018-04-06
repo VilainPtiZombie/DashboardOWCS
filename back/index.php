@@ -27,21 +27,18 @@
 </head>
 
 <!-- BODY -->
-<body class="container">
+<body class="container col-12">
 
 	<!-- INPORT HEADER -->
 	<?php include('../include/header_back.php'); ?>
 
-
-	<h2 class="page-header"> Bienvenue sur le Back-Office de Vinostar <?php echo $_SESSION['user'];
- ?></h2>
-
-	
+            
+            
 
 
 	<!-- INPORT FOOTER -->
 	<?php include('../include/footer_back.php'); ?>
-	
+</div>	
 </body>
 
 
