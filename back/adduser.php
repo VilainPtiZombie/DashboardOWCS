@@ -99,7 +99,7 @@
 				<td><?php echo $data['pseudo']; ?></td>
 				<td><?php echo dateEU($data['created_at'],true); ?></td>
 				<td><?php echo $data['level']; ?></td>
-				<td>
+                                <td><a href="#"> Modifier</a> / 
 					<?php //si l'utilisateur n'est pas superadmin, on ajoute le lien de suppression
 					if($data['level'] != 'clients'){
 						echo '(<a href="../traitement/deleteUser.php?id='.$data['id'].'">Supprimer</a>)';
@@ -113,6 +113,47 @@
 
 		</table>
 	</article>
+        <section class="col-lg-6">
+            <h3 class="col-lg-12"> Modification du Mot de passe Utilisateur</h3>
+            <!-- Création du Formulaire de modifications-->
+            
+          
+            
+	<form action="changePassword.php" method="POST">
+		<label id="inlineFormInput" class="col-lg-12" for="levelselect">
+                    <select class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" name="id" id="levelselect">
+					<?php 
+
+						$mdpChange = $mysql->prepare('SELECT * FROM users');
+						$mdpChange->execute();
+                                                
+                                                //
+
+						while($mdpChanged = $mdpChange->fetch()) {
+					?>
+                            <option value="<?php echo $mdpChanged['id']; ?>">
+							<?php echo $mdpChanged['pseudo']; ?> 
+						</option>
+
+					<?php } ?>
+                                                
+                        </select>
+                </label> 
+		<label id="inlineFormInput" class="col-lg-3">
+			<input class="form-control mb-2 mr-sm-2 mb-sm-0" type="password" name="oldPass" placeholder="Ancien mot de passe"/>
+		</label>
+		<label id="inlineFormInput" class="col-lg-3">
+			<input class="form-control mb-2 mr-sm-2 mb-sm-0" type="password" name="Npassword" placeholder="Nouveau mot de passe"/>
+		</label>
+		<label id="inlineFormInput" class="col-lg-3">
+			<input class="form-control mb-2 mr-sm-2 mb-sm-0" type="password" name="confirmPassword" placeholder="Confirmation de mot de passe"/>
+		</label>
+		<label id="inlineFormInput" class="col-lg-3">
+			<input class="form-control mb-2 mr-sm-2 mb-sm-0 btn btn-info" type="submit" value="Modifier"/>
+		</label>
+	</form>
+            
+        </section>
 
 
 
@@ -124,27 +165,3 @@
 
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

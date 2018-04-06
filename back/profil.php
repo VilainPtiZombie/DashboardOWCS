@@ -47,7 +47,7 @@
 
 	<h3>Changement de mot de passe</h3>
 
-	<form action="../traitement/changepassword.php" method="POST">
+	<form action="../traitement/changePassword.php" method="POST">
 		<input type="hidden" name="id" value="<?php echo $_SESSION['id']; ?>" /> 
 		<p>
 			<input type="password" name="oldPass" placeholder="Ancien mot de passe"/>
